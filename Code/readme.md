@@ -10,7 +10,7 @@ just like this:
 #include<bits/stdc++.h>
 using namespace std;
 int main() {
-	int Num;
+    int Num;
     cin >> Num;
     for(int i = 1; i <= n; i++)
         cout << i << endl;
