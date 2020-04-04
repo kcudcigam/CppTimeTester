@@ -7,8 +7,8 @@ TimeL = 0
 Li = 0
 Ri = 0
 Ti = 0
-AddCode_Check = "int main() {\n\tfreopen(\"DataSize.txt\", \"r\", stdin);\n\tfreopen(\"INPUTFILE.in\", \"w\", stdout);\n\tfakemain();\n\treturn 0;\n}"
-AddCode = "int main() {\n\tfreopen(\"INPUTFILE.in\", \"r\", stdin);\n\tfreopen(\"FILENAME.out\", \"w\", stdout);\n\tclock_t START_FILE,FINISH_FILE;\n\tSTART_FILE = clock();\n\tfakemain();\n\tFINISH_FILE = clock();\n\tfclose(stdin), fclose(stdout);\n\tfreopen(\"FILENAME.data\", \"a+\", stdout);\n\tcout << FINISH_FILE - START_FILE << endl;\n\tfclose(stdout);\n\treturn 0;\n}"
+AddCode_Check = "signed main() {\n\tfreopen(\"DataSize.txt\", \"r\", stdin);\n\tfreopen(\"INPUTFILE.in\", \"w\", stdout);\n\tfakemain();\n\treturn 0;\n}"
+AddCode = "signed main() {\n\tfreopen(\"INPUTFILE.in\", \"r\", stdin);\n\tfreopen(\"FILENAME.out\", \"w\", stdout);\n\tclock_t START_FILE,FINISH_FILE;\n\tSTART_FILE = clock();\n\tfakemain();\n\tFINISH_FILE = clock();\n\tfclose(stdin), fclose(stdout);\n\tfreopen(\"FILENAME.data\", \"a+\", stdout);\n\tcout << FINISH_FILE - START_FILE << endl;\n\tfclose(stdout);\n\treturn 0;\n}"
 def CopyCpp():
     os.system("copy Code\\*.cpp Workshop 2>nul 1>nul")
 def CheckCpp():
