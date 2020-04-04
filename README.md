@@ -31,7 +31,7 @@
 
 然后等待程序运行结束后, 文件夹内的 "result.html" 即为结果
 
-![TimeTester.gif](https://i.loli.net/2020/04/02/4ZMAslS6Uw2RbFn.gif)
+<img src="https://i.loli.net/2020/04/02/4ZMAslS6Uw2RbFn.gif" width="600" hegiht="300" align=center />
 
 #### Tips
 
