@@ -3,12 +3,12 @@ import threading
 import shutil
 CppFile = []
 isCheck = 0
-TimeL = 0
+TimeL = 0.0
 Li = 0
 Ri = 0
 Ti = 0
 AddCode_Check = "signed main() {\n\tfreopen(\"DataSize.txt\", \"r\", stdin);\n\tfreopen(\"INPUTFILE.in\", \"w\", stdout);\n\tfakemain();\n\treturn 0;\n}"
-AddCode = "signed main() {\n\tfreopen(\"INPUTFILE.in\", \"r\", stdin);\n\tfreopen(\"FILENAME.out\", \"w\", stdout);\n\tclock_t START_FILE,FINISH_FILE;\n\tSTART_FILE = clock();\n\tfakemain();\n\tFINISH_FILE = clock();\n\tfclose(stdin), fclose(stdout);\n\tfreopen(\"FILENAME.data\", \"a+\", stdout);\n\tcout << FINISH_FILE - START_FILE << endl;\n\tfclose(stdout);\n\treturn 0;\n}"
+AddCode = "signed main() {\n\tfreopen(\"INPUTFILE.in\", \"r\", stdin);\n\tfreopen(\"FILENAME.out\", \"w\", stdout);\n\tclock_t START_FILE,FINISH_FILE;\n\tSTART_FILE = clock();\n\tfakemain();\n\tFINISH_FILE = clock();\n\tfclose(stdin), fclose(stdout);\n\tfreopen(\"FILENAME.data\", \"a+\", stdout);\n\tstd::cout << FINISH_FILE - START_FILE << endl;\n\tfclose(stdout);\n\treturn 0;\n}"
 def CopyCpp():
     os.system("copy Code\\*.cpp Workshop 2>nul 1>nul")
 def CheckCpp():
@@ -65,7 +65,7 @@ def AddFile():
         tmp_data = fo.read()
         tmp_data = tmp_data.replace("main", "fakemain")
         fo.seek(0)
-        fo.write("#include<time.h>\n" + tmp_data)
+        fo.write("#include<time.h>\n#include<bits/stdc++.h>\n" + tmp_data)
         fo.seek(0, 2)
         fo.write(AddCode.replace("FILENAME", FileI))
         fo.close()
@@ -132,7 +132,7 @@ if Ti <= 0:
     print("Error, Input Invalid. The Delta Data Should be Bigger than 0")
     shutil.rmtree("Workshop")
     exit()
-TimeL = int(input("Please Enter the Time Limit(s): "))
+TimeL = float(input("Please Enter the Time Limit(s): "))
 if TimeL <= 0:
     print("Error, Input Invalid. The TimeLimit Should be Bigger than 0")
     shutil.rmtree("Workshop")
