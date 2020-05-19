@@ -42,7 +42,7 @@ def CheckCpp():
     print("Your Codes' Names are: " + str(CppFile))
 def CompileCpp():
     global CppFile
-    if os.system("g++ -w -Wl,-Wl,--stack=2147483647 -std=c++11 .WORKSHOP\\check.cpp -o .WORKSHOP\\check.exe") == 1:
+    if os.system("g++ -w -Wl,--stack=2147483647 -std=c++11 .WORKSHOP\\check.cpp -o .WORKSHOP\\check.exe") == 1:
         print("Oh no! There's a Problem in your check.cpp. Please Check it again")
         shutil.rmtree(".WORKSHOP")
         exit()
